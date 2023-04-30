@@ -4,12 +4,13 @@
 # Build:
 #     docker build -t ffxd .
 #
+# Allow access to X server:
+#     xhost +local:
+#
 # First run:
-#     xhost +
 #     docker run -it --name ffxd -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --net=host ffxd:latest
 #
 # Subsequent runs:
-#     xhost +
 #     docker start ffxd
 
 FROM fedora:latest
